@@ -17,37 +17,14 @@
                         <img src="/resources/A7.jpg" alt="Contactless3" />
                         <img src="/resources/A002.svg" alt="Contactless2" />
                     </div>
-                    <form onsubmit={checkInHandler}>
+                    
+                    <form class="slds-border_top slds-p-top_x-large" onsubmit={checkInHandler}>
                         <!--First Input field Name-->
-                        <div class="slds-form-element">
-                            <label class="slds-form-element__label" for="text-input-id-47">
-                            <abbr class="slds-required" title="required">* </abbr>Name</label>
-                            <div class="slds-form-element__control">
-                            <input type="text" 
-                            name="Name"
-                            id="text-input-id-1" 
-                            required 
-                            class="slds-input" 
-                            onkeyup={formchange}
-                            />
-                            </div>
-                        </div>
+                        <my-custom-input type="text" name="Name" required label="Name" onformchange={formchange}></my-custom-input>
                         <!--Second Input field Email-->
-                        <div class="slds-form-element">
-                            <label class="slds-form-element__label" for="text-input-id-47">
-                            <abbr class="slds-required" title="required">* </abbr>Email</label>
-                            <div class="slds-form-element__control">
-                                <input type="email" name="Email" id="text-input-id-2" required class="slds-input" onkeyup={formchange}/>
-                            </div>
-                        </div>
+                        <my-custom-input type="email" name="Email" required label="Email" onformchange={formchange}></my-custom-input>
                         <!--Third Input field Mobile-->
-                        <div class="slds-form-element">
-                            <label class="slds-form-element__label" for="text-input-id-47">
-                            <abbr class="slds-required" title="required">* </abbr>Mobile</label>
-                            <div class="slds-form-element__control">
-                                <input type="number" name="Mobile" id="text-input-id-3" required class="slds-input" onkeyup={formchange}/>
-                            </div>
-                        </div>
+                        <my-custom-input type="number" name="Mobile" required label="Mobile" onformchange={formchange}></my-custom-input>
                         <!--Form Button will come here-->
                         <div class="slds-p-top_medium">
                             <button type="submit" class="slds-card__footer-action slds-button slds-button_brand margin-auto">
